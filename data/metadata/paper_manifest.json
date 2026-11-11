@@ -1,0 +1,54 @@
+{
+  "project": "The Relay",
+  "extraction_timestamp_utc": "2026-11-11T13:06:46.552259+00:00",
+  "paper_count": 3,
+  "total_pdf_pages": 120,
+  "total_extracted_characters": 376007,
+  "papers": [
+    {
+      "paper_id": "attention_is_all_you_need",
+      "title": "Attention Is All You Need",
+      "arxiv_id": "1706.03762",
+      "version": "v7",
+      "filename": "attention_is_all_you_need_v7.pdf",
+      "file_size_bytes": 2215244,
+      "sha256": "BDFAA68D8984F0DC02BEACA527B76F207D99B666D31D1DA728EE0728182DF697",
+      "pdf_pages": 15,
+      "pages_with_text": 15,
+      "total_extracted_characters": 39483,
+      "extraction_file": "data\\raw_pages\\attention_is_all_you_need.jsonl",
+      "extraction_method": "PyMuPDF get_text(sort=True)",
+      "extracted_at_utc": "2026-11-11T13:06:46.140978+00:00"
+    },
+    {
+      "paper_id": "moshi",
+      "title": "Moshi: a speech-text foundation model for real-time dialogue",
+      "arxiv_id": "2410.00037",
+      "version": "v1",
+      "filename": "moshi_v1.pdf",
+      "file_size_bytes": 4694312,
+      "sha256": "A687144CC77BEA86B0C60AE800CCB1D3E0816033FA5C7960388FE29A0DBFCFAC",
+      "pdf_pages": 66,
+      "pages_with_text": 66,
+      "total_extracted_characters": 191330,
+      "extraction_file": "data\\raw_pages\\moshi.jsonl",
+      "extraction_method": "PyMuPDF get_text(sort=True)",
+      "extracted_at_utc": "2026-11-11T13:06:46.365481+00:00"
+    },
+    {
+      "paper_id": "dynamic_chunking",
+      "title": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling",
+      "arxiv_id": "2507.07955",
+      "version": "v2",
+      "filename": "dynamic_chunking_v2.pdf",
+      "file_size_bytes": 1375282,
+      "sha256": "04A2B32E6E82853CFC23C5DB132750874A86CDE99219EC6F664128F4AA83122F",
+      "pdf_pages": 39,
+      "pages_with_text": 39,
+      "total_extracted_characters": 145194,
+      "extraction_file": "data\\raw_pages\\dynamic_chunking.jsonl",
+      "extraction_method": "PyMuPDF get_text(sort=True)",
+      "extracted_at_utc": "2026-11-11T13:06:46.552259+00:00"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Test and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated data
+data/chunks/
+data/indexes/
+
+# Temporary files
+*.tmp
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+.dist/
+
+# Downloaded source papers
+papers/*.pdf
+
+# Generated PDF extraction and retrieval data
+data/raw_pages/
+data/raw_pages_sorted/
+data/cleaned_pages/
+data/sectioned_pages/
+data/chunks/
+data/indexes/
+
+# Large local inspection outputs
+results/*inspection*.txt

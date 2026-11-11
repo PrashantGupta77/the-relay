@@ -1,0 +1,1665 @@
+{
+  "tokenizer": "o200k_harmony",
+  "tokenizer_library": "tiktoken",
+  "settings": [
+    {
+      "setting": "A",
+      "chunk_size": 300,
+      "overlap": 50,
+      "tokenizer": "o200k_harmony",
+      "tokenizer_library": "tiktoken",
+      "chunk_count": 430,
+      "total_chunk_tokens": 117945,
+      "average_chunk_tokens": 274.29,
+      "minimum_chunk_tokens": 2,
+      "maximum_chunk_tokens": 300,
+      "average_pages_per_chunk": 1.32,
+      "papers": {
+        "attention_is_all_you_need": 50,
+        "dynamic_chunking": 166,
+        "moshi": 214
+      },
+      "groups": [
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0000",
+          "section_path": null,
+          "token_count": 651,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0001",
+          "section_path": "1 Introduction",
+          "token_count": 367,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0002",
+          "section_path": "2 Background",
+          "token_count": 364,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0003",
+          "section_path": "3 Model Architecture",
+          "token_count": 166,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0004",
+          "section_path": "3 Model Architecture > 3.1 Encoder and Decoder Stacks",
+          "token_count": 296,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0005",
+          "section_path": "3 Model Architecture > 3.2 Attention",
+          "token_count": 120,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0006",
+          "section_path": "3 Model Architecture > 3.2 Attention > 3.2.1 Scaled Dot-Product Attention",
+          "token_count": 334,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0007",
+          "section_path": "3 Model Architecture > 3.2 Attention > 3.2.2 Multi-Head Attention",
+          "token_count": 363,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0008",
+          "section_path": "3 Model Architecture > 3.2 Attention > 3.2.3 Applications of Attention in our Model",
+          "token_count": 261,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0009",
+          "section_path": "3 Model Architecture > 3.3 Position-wise Feed-Forward Networks",
+          "token_count": 155,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0010",
+          "section_path": "3 Model Architecture > 3.4 Embeddings and Softmax",
+          "token_count": 261,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0011",
+          "section_path": "3 Model Architecture > 3.5 Positional Encoding",
+          "token_count": 324,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0012",
+          "section_path": "4 Why Self-Attention",
+          "token_count": 652,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0013",
+          "section_path": "5 Training",
+          "token_count": 14,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0014",
+          "section_path": "5 Training > 5.1 Training Data and Batching",
+          "token_count": 140,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0015",
+          "section_path": "5 Training > 5.2 Hardware and Schedule",
+          "token_count": 112,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0016",
+          "section_path": "5 Training > 5.3 Optimizer",
+          "token_count": 135,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0017",
+          "section_path": "5 Training > 5.4 Regularization",
+          "token_count": 464,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0018",
+          "section_path": "6 Results",
+          "token_count": 3,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0019",
+          "section_path": "6 Results > 6.1 Machine Translation",
+          "token_count": 398,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0020",
+          "section_path": "6 Results > 6.2 Model Variations",
+          "token_count": 727,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0021",
+          "section_path": "6 Results > 6.3 English Constituency Parsing",
+          "token_count": 654,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0022",
+          "section_path": "7 Conclusion",
+          "token_count": 3167,
+          "chunk_count": 13
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0000",
+          "section_path": null,
+          "token_count": 404,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0001",
+          "section_path": "1 Introduction",
+          "token_count": 2317,
+          "chunk_count": 10
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0002",
+          "section_path": "2 H-Net Architecture",
+          "token_count": 140,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0003",
+          "section_path": "2 H-Net Architecture > 2.1 Architectural Overview",
+          "token_count": 7,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0004",
+          "section_path": "2 H-Net Architecture > 2.1 Architectural Overview > 2.1.1 Components of H-Net",
+          "token_count": 1616,
+          "chunk_count": 7
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0005",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC)",
+          "token_count": 64,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0006",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC) > 2.2.1 Chunking Layer",
+          "token_count": 622,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0007",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC) > 2.2.2 Dechunking",
+          "token_count": 1582,
+          "chunk_count": 7
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0008",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC) > 2.2.3 Ratio Loss",
+          "token_count": 611,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0009",
+          "section_path": "2 H-Net Architecture > 2.3 Improved Techniques for Hierarchical Sequence Modeling",
+          "token_count": 832,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0010",
+          "section_path": "2 H-Net Architecture > 2.4 Autoregressive Training and Inference",
+          "token_count": 723,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0011",
+          "section_path": "3 Experiments",
+          "token_count": 2063,
+          "chunk_count": 9
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0012",
+          "section_path": "3 Experiments > 3.1 Language Modeling",
+          "token_count": 5282,
+          "chunk_count": 21
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0013",
+          "section_path": "3 Experiments > 3.2 Alternate Language Datasets",
+          "token_count": 1955,
+          "chunk_count": 8
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0014",
+          "section_path": "3 Experiments > 3.3 Ablation Studies",
+          "token_count": 2928,
+          "chunk_count": 12
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0015",
+          "section_path": "4 Discussion",
+          "token_count": 1899,
+          "chunk_count": 8
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0016",
+          "section_path": "5 Conclusion",
+          "token_count": 16502,
+          "chunk_count": 66
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0000",
+          "section_path": null,
+          "token_count": 494,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0001",
+          "section_path": "1 Introduction",
+          "token_count": 1524,
+          "chunk_count": 6
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0002",
+          "section_path": "2 Related Work",
+          "token_count": 2238,
+          "chunk_count": 9
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0003",
+          "section_path": "3 Model",
+          "token_count": 2,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0004",
+          "section_path": "3 Model > 3.1 Overview",
+          "token_count": 405,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0005",
+          "section_path": "3 Model > 3.2 The Helium Text Language Model",
+          "token_count": 9,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0006",
+          "section_path": "3 Model > 3.2 The Helium Text Language Model > 3.2.1 Architecture",
+          "token_count": 294,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0007",
+          "section_path": "3 Model > 3.2 The Helium Text Language Model > 3.2.2 Pre-training data filtering",
+          "token_count": 1034,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0008",
+          "section_path": "3 Model > 3.3 Audio Tokenization",
+          "token_count": 401,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0009",
+          "section_path": "3 Model > 3.3 Audio Tokenization > 3.3.1 Architecture",
+          "token_count": 1446,
+          "chunk_count": 6
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0010",
+          "section_path": "3 Model > 3.3 Audio Tokenization > 3.3.2 Learning semantic-acoustic tokens with a split RVQ",
+          "token_count": 510,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0011",
+          "section_path": "3 Model > 3.4 Generative audio modeling",
+          "token_count": 118,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0012",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.1 Hierarchical autoregressive modeling with RQ-Transformer",
+          "token_count": 1210,
+          "chunk_count": 5
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0013",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.2 Audio modeling",
+          "token_count": 573,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0014",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.3 Multi-stream modeling",
+          "token_count": 337,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0015",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.4 Inner Monologue",
+          "token_count": 1467,
+          "chunk_count": 6
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0016",
+          "section_path": "4 Datasets and training",
+          "token_count": 5,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0017",
+          "section_path": "4 Datasets and training > 4.1 Text data",
+          "token_count": 216,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0018",
+          "section_path": "4 Datasets and training > 4.2 Audio data",
+          "token_count": 498,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0019",
+          "section_path": "4 Datasets and training > 4.3 Speech-Text Instruct data",
+          "token_count": 942,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0020",
+          "section_path": "4 Datasets and training > 4.4 Training stages and hyper-parameters",
+          "token_count": 1402,
+          "chunk_count": 6
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0021",
+          "section_path": "5 Evaluation",
+          "token_count": 2,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0022",
+          "section_path": "5 Evaluation > 5.1 Text Language Modeling",
+          "token_count": 1740,
+          "chunk_count": 7
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0023",
+          "section_path": "5 Evaluation > 5.2 Audio Tokenization",
+          "token_count": 1962,
+          "chunk_count": 8
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0024",
+          "section_path": "5 Evaluation > 5.3 Ablations on generative modeling",
+          "token_count": 970,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0025",
+          "section_path": "5 Evaluation > 5.4 Audio language modeling",
+          "token_count": 2195,
+          "chunk_count": 9
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0026",
+          "section_path": "5 Evaluation > 5.5 Spoken question answering",
+          "token_count": 939,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0027",
+          "section_path": "5 Evaluation > 5.6 Quality and statistics of generated dialogues",
+          "token_count": 463,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0028",
+          "section_path": "5 Evaluation > 5.7 Streaming ASR and TTS",
+          "token_count": 585,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0029",
+          "section_path": "5 Evaluation > 5.8 Compressing Moshi and Impact on Speech Quality",
+          "token_count": 3402,
+          "chunk_count": 14
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0030",
+          "section_path": "6 Safety",
+          "token_count": 122,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0031",
+          "section_path": "6 Safety > 6.1 Toxicity analysis",
+          "token_count": 340,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0032",
+          "section_path": "6 Safety > 6.2 Regurgitation analysis",
+          "token_count": 942,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0033",
+          "section_path": "6 Safety > 6.3 System voice consistency",
+          "token_count": 474,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0034",
+          "section_path": "6 Safety > 6.4 Identification of the content generated by Moshi: Watermarking",
+          "token_count": 2196,
+          "chunk_count": 9
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0035",
+          "section_path": "7 Conclusion",
+          "token_count": 19115,
+          "chunk_count": 77
+        }
+      ],
+      "output_file": "data\\chunks\\setting_a.jsonl"
+    },
+    {
+      "setting": "B",
+      "chunk_size": 600,
+      "overlap": 80,
+      "tokenizer": "o200k_harmony",
+      "tokenizer_library": "tiktoken",
+      "chunk_count": 227,
+      "total_chunk_tokens": 112325,
+      "average_chunk_tokens": 494.82,
+      "minimum_chunk_tokens": 2,
+      "maximum_chunk_tokens": 600,
+      "average_pages_per_chunk": 1.53,
+      "papers": {
+        "attention_is_all_you_need": 32,
+        "dynamic_chunking": 84,
+        "moshi": 111
+      },
+      "groups": [
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0000",
+          "section_path": null,
+          "token_count": 651,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0001",
+          "section_path": "1 Introduction",
+          "token_count": 367,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0002",
+          "section_path": "2 Background",
+          "token_count": 364,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0003",
+          "section_path": "3 Model Architecture",
+          "token_count": 166,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0004",
+          "section_path": "3 Model Architecture > 3.1 Encoder and Decoder Stacks",
+          "token_count": 296,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0005",
+          "section_path": "3 Model Architecture > 3.2 Attention",
+          "token_count": 120,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0006",
+          "section_path": "3 Model Architecture > 3.2 Attention > 3.2.1 Scaled Dot-Product Attention",
+          "token_count": 334,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0007",
+          "section_path": "3 Model Architecture > 3.2 Attention > 3.2.2 Multi-Head Attention",
+          "token_count": 363,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0008",
+          "section_path": "3 Model Architecture > 3.2 Attention > 3.2.3 Applications of Attention in our Model",
+          "token_count": 261,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0009",
+          "section_path": "3 Model Architecture > 3.3 Position-wise Feed-Forward Networks",
+          "token_count": 155,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0010",
+          "section_path": "3 Model Architecture > 3.4 Embeddings and Softmax",
+          "token_count": 261,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0011",
+          "section_path": "3 Model Architecture > 3.5 Positional Encoding",
+          "token_count": 324,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0012",
+          "section_path": "4 Why Self-Attention",
+          "token_count": 652,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0013",
+          "section_path": "5 Training",
+          "token_count": 14,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0014",
+          "section_path": "5 Training > 5.1 Training Data and Batching",
+          "token_count": 140,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0015",
+          "section_path": "5 Training > 5.2 Hardware and Schedule",
+          "token_count": 112,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0016",
+          "section_path": "5 Training > 5.3 Optimizer",
+          "token_count": 135,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0017",
+          "section_path": "5 Training > 5.4 Regularization",
+          "token_count": 464,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0018",
+          "section_path": "6 Results",
+          "token_count": 3,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0019",
+          "section_path": "6 Results > 6.1 Machine Translation",
+          "token_count": 398,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0020",
+          "section_path": "6 Results > 6.2 Model Variations",
+          "token_count": 727,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0021",
+          "section_path": "6 Results > 6.3 English Constituency Parsing",
+          "token_count": 654,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0022",
+          "section_path": "7 Conclusion",
+          "token_count": 3167,
+          "chunk_count": 6
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0000",
+          "section_path": null,
+          "token_count": 404,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0001",
+          "section_path": "1 Introduction",
+          "token_count": 2317,
+          "chunk_count": 5
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0002",
+          "section_path": "2 H-Net Architecture",
+          "token_count": 140,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0003",
+          "section_path": "2 H-Net Architecture > 2.1 Architectural Overview",
+          "token_count": 7,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0004",
+          "section_path": "2 H-Net Architecture > 2.1 Architectural Overview > 2.1.1 Components of H-Net",
+          "token_count": 1616,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0005",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC)",
+          "token_count": 64,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0006",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC) > 2.2.1 Chunking Layer",
+          "token_count": 622,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0007",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC) > 2.2.2 Dechunking",
+          "token_count": 1582,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0008",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC) > 2.2.3 Ratio Loss",
+          "token_count": 611,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0009",
+          "section_path": "2 H-Net Architecture > 2.3 Improved Techniques for Hierarchical Sequence Modeling",
+          "token_count": 832,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0010",
+          "section_path": "2 H-Net Architecture > 2.4 Autoregressive Training and Inference",
+          "token_count": 723,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0011",
+          "section_path": "3 Experiments",
+          "token_count": 2063,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0012",
+          "section_path": "3 Experiments > 3.1 Language Modeling",
+          "token_count": 5282,
+          "chunk_count": 11
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0013",
+          "section_path": "3 Experiments > 3.2 Alternate Language Datasets",
+          "token_count": 1955,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0014",
+          "section_path": "3 Experiments > 3.3 Ablation Studies",
+          "token_count": 2928,
+          "chunk_count": 6
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0015",
+          "section_path": "4 Discussion",
+          "token_count": 1899,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0016",
+          "section_path": "5 Conclusion",
+          "token_count": 16502,
+          "chunk_count": 32
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0000",
+          "section_path": null,
+          "token_count": 494,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0001",
+          "section_path": "1 Introduction",
+          "token_count": 1524,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0002",
+          "section_path": "2 Related Work",
+          "token_count": 2238,
+          "chunk_count": 5
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0003",
+          "section_path": "3 Model",
+          "token_count": 2,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0004",
+          "section_path": "3 Model > 3.1 Overview",
+          "token_count": 405,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0005",
+          "section_path": "3 Model > 3.2 The Helium Text Language Model",
+          "token_count": 9,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0006",
+          "section_path": "3 Model > 3.2 The Helium Text Language Model > 3.2.1 Architecture",
+          "token_count": 294,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0007",
+          "section_path": "3 Model > 3.2 The Helium Text Language Model > 3.2.2 Pre-training data filtering",
+          "token_count": 1034,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0008",
+          "section_path": "3 Model > 3.3 Audio Tokenization",
+          "token_count": 401,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0009",
+          "section_path": "3 Model > 3.3 Audio Tokenization > 3.3.1 Architecture",
+          "token_count": 1446,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0010",
+          "section_path": "3 Model > 3.3 Audio Tokenization > 3.3.2 Learning semantic-acoustic tokens with a split RVQ",
+          "token_count": 510,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0011",
+          "section_path": "3 Model > 3.4 Generative audio modeling",
+          "token_count": 118,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0012",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.1 Hierarchical autoregressive modeling with RQ-Transformer",
+          "token_count": 1210,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0013",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.2 Audio modeling",
+          "token_count": 573,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0014",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.3 Multi-stream modeling",
+          "token_count": 337,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0015",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.4 Inner Monologue",
+          "token_count": 1467,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0016",
+          "section_path": "4 Datasets and training",
+          "token_count": 5,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0017",
+          "section_path": "4 Datasets and training > 4.1 Text data",
+          "token_count": 216,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0018",
+          "section_path": "4 Datasets and training > 4.2 Audio data",
+          "token_count": 498,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0019",
+          "section_path": "4 Datasets and training > 4.3 Speech-Text Instruct data",
+          "token_count": 942,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0020",
+          "section_path": "4 Datasets and training > 4.4 Training stages and hyper-parameters",
+          "token_count": 1402,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0021",
+          "section_path": "5 Evaluation",
+          "token_count": 2,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0022",
+          "section_path": "5 Evaluation > 5.1 Text Language Modeling",
+          "token_count": 1740,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0023",
+          "section_path": "5 Evaluation > 5.2 Audio Tokenization",
+          "token_count": 1962,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0024",
+          "section_path": "5 Evaluation > 5.3 Ablations on generative modeling",
+          "token_count": 970,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0025",
+          "section_path": "5 Evaluation > 5.4 Audio language modeling",
+          "token_count": 2195,
+          "chunk_count": 5
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0026",
+          "section_path": "5 Evaluation > 5.5 Spoken question answering",
+          "token_count": 939,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0027",
+          "section_path": "5 Evaluation > 5.6 Quality and statistics of generated dialogues",
+          "token_count": 463,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0028",
+          "section_path": "5 Evaluation > 5.7 Streaming ASR and TTS",
+          "token_count": 585,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0029",
+          "section_path": "5 Evaluation > 5.8 Compressing Moshi and Impact on Speech Quality",
+          "token_count": 3402,
+          "chunk_count": 7
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0030",
+          "section_path": "6 Safety",
+          "token_count": 122,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0031",
+          "section_path": "6 Safety > 6.1 Toxicity analysis",
+          "token_count": 340,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0032",
+          "section_path": "6 Safety > 6.2 Regurgitation analysis",
+          "token_count": 942,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0033",
+          "section_path": "6 Safety > 6.3 System voice consistency",
+          "token_count": 474,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0034",
+          "section_path": "6 Safety > 6.4 Identification of the content generated by Moshi: Watermarking",
+          "token_count": 2196,
+          "chunk_count": 5
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0035",
+          "section_path": "7 Conclusion",
+          "token_count": 19115,
+          "chunk_count": 37
+        }
+      ],
+      "output_file": "data\\chunks\\setting_b.jsonl"
+    },
+    {
+      "setting": "C",
+      "chunk_size": 900,
+      "overlap": 120,
+      "tokenizer": "o200k_harmony",
+      "tokenizer_library": "tiktoken",
+      "chunk_count": 167,
+      "total_chunk_tokens": 111167,
+      "average_chunk_tokens": 665.67,
+      "minimum_chunk_tokens": 2,
+      "maximum_chunk_tokens": 900,
+      "average_pages_per_chunk": 1.74,
+      "papers": {
+        "attention_is_all_you_need": 26,
+        "dynamic_chunking": 57,
+        "moshi": 84
+      },
+      "groups": [
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0000",
+          "section_path": null,
+          "token_count": 651,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0001",
+          "section_path": "1 Introduction",
+          "token_count": 367,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0002",
+          "section_path": "2 Background",
+          "token_count": 364,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0003",
+          "section_path": "3 Model Architecture",
+          "token_count": 166,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0004",
+          "section_path": "3 Model Architecture > 3.1 Encoder and Decoder Stacks",
+          "token_count": 296,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0005",
+          "section_path": "3 Model Architecture > 3.2 Attention",
+          "token_count": 120,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0006",
+          "section_path": "3 Model Architecture > 3.2 Attention > 3.2.1 Scaled Dot-Product Attention",
+          "token_count": 334,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0007",
+          "section_path": "3 Model Architecture > 3.2 Attention > 3.2.2 Multi-Head Attention",
+          "token_count": 363,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0008",
+          "section_path": "3 Model Architecture > 3.2 Attention > 3.2.3 Applications of Attention in our Model",
+          "token_count": 261,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0009",
+          "section_path": "3 Model Architecture > 3.3 Position-wise Feed-Forward Networks",
+          "token_count": 155,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0010",
+          "section_path": "3 Model Architecture > 3.4 Embeddings and Softmax",
+          "token_count": 261,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0011",
+          "section_path": "3 Model Architecture > 3.5 Positional Encoding",
+          "token_count": 324,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0012",
+          "section_path": "4 Why Self-Attention",
+          "token_count": 652,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0013",
+          "section_path": "5 Training",
+          "token_count": 14,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0014",
+          "section_path": "5 Training > 5.1 Training Data and Batching",
+          "token_count": 140,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0015",
+          "section_path": "5 Training > 5.2 Hardware and Schedule",
+          "token_count": 112,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0016",
+          "section_path": "5 Training > 5.3 Optimizer",
+          "token_count": 135,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0017",
+          "section_path": "5 Training > 5.4 Regularization",
+          "token_count": 464,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0018",
+          "section_path": "6 Results",
+          "token_count": 3,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0019",
+          "section_path": "6 Results > 6.1 Machine Translation",
+          "token_count": 398,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0020",
+          "section_path": "6 Results > 6.2 Model Variations",
+          "token_count": 727,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0021",
+          "section_path": "6 Results > 6.3 English Constituency Parsing",
+          "token_count": 654,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "attention_is_all_you_need",
+          "group_id": "attention_is_all_you_need_group_0022",
+          "section_path": "7 Conclusion",
+          "token_count": 3167,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0000",
+          "section_path": null,
+          "token_count": 404,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0001",
+          "section_path": "1 Introduction",
+          "token_count": 2317,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0002",
+          "section_path": "2 H-Net Architecture",
+          "token_count": 140,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0003",
+          "section_path": "2 H-Net Architecture > 2.1 Architectural Overview",
+          "token_count": 7,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0004",
+          "section_path": "2 H-Net Architecture > 2.1 Architectural Overview > 2.1.1 Components of H-Net",
+          "token_count": 1616,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0005",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC)",
+          "token_count": 64,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0006",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC) > 2.2.1 Chunking Layer",
+          "token_count": 622,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0007",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC) > 2.2.2 Dechunking",
+          "token_count": 1582,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0008",
+          "section_path": "2 H-Net Architecture > 2.2 Dynamic Chunking (DC) > 2.2.3 Ratio Loss",
+          "token_count": 611,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0009",
+          "section_path": "2 H-Net Architecture > 2.3 Improved Techniques for Hierarchical Sequence Modeling",
+          "token_count": 832,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0010",
+          "section_path": "2 H-Net Architecture > 2.4 Autoregressive Training and Inference",
+          "token_count": 723,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0011",
+          "section_path": "3 Experiments",
+          "token_count": 2063,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0012",
+          "section_path": "3 Experiments > 3.1 Language Modeling",
+          "token_count": 5282,
+          "chunk_count": 7
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0013",
+          "section_path": "3 Experiments > 3.2 Alternate Language Datasets",
+          "token_count": 1955,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0014",
+          "section_path": "3 Experiments > 3.3 Ablation Studies",
+          "token_count": 2928,
+          "chunk_count": 4
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0015",
+          "section_path": "4 Discussion",
+          "token_count": 1899,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "dynamic_chunking",
+          "group_id": "dynamic_chunking_group_0016",
+          "section_path": "5 Conclusion",
+          "token_count": 16502,
+          "chunk_count": 22
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0000",
+          "section_path": null,
+          "token_count": 494,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0001",
+          "section_path": "1 Introduction",
+          "token_count": 1524,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0002",
+          "section_path": "2 Related Work",
+          "token_count": 2238,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0003",
+          "section_path": "3 Model",
+          "token_count": 2,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0004",
+          "section_path": "3 Model > 3.1 Overview",
+          "token_count": 405,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0005",
+          "section_path": "3 Model > 3.2 The Helium Text Language Model",
+          "token_count": 9,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0006",
+          "section_path": "3 Model > 3.2 The Helium Text Language Model > 3.2.1 Architecture",
+          "token_count": 294,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0007",
+          "section_path": "3 Model > 3.2 The Helium Text Language Model > 3.2.2 Pre-training data filtering",
+          "token_count": 1034,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0008",
+          "section_path": "3 Model > 3.3 Audio Tokenization",
+          "token_count": 401,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0009",
+          "section_path": "3 Model > 3.3 Audio Tokenization > 3.3.1 Architecture",
+          "token_count": 1446,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0010",
+          "section_path": "3 Model > 3.3 Audio Tokenization > 3.3.2 Learning semantic-acoustic tokens with a split RVQ",
+          "token_count": 510,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0011",
+          "section_path": "3 Model > 3.4 Generative audio modeling",
+          "token_count": 118,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0012",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.1 Hierarchical autoregressive modeling with RQ-Transformer",
+          "token_count": 1210,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0013",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.2 Audio modeling",
+          "token_count": 573,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0014",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.3 Multi-stream modeling",
+          "token_count": 337,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0015",
+          "section_path": "3 Model > 3.4 Generative audio modeling > 3.4.4 Inner Monologue",
+          "token_count": 1467,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0016",
+          "section_path": "4 Datasets and training",
+          "token_count": 5,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0017",
+          "section_path": "4 Datasets and training > 4.1 Text data",
+          "token_count": 216,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0018",
+          "section_path": "4 Datasets and training > 4.2 Audio data",
+          "token_count": 498,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0019",
+          "section_path": "4 Datasets and training > 4.3 Speech-Text Instruct data",
+          "token_count": 942,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0020",
+          "section_path": "4 Datasets and training > 4.4 Training stages and hyper-parameters",
+          "token_count": 1402,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0021",
+          "section_path": "5 Evaluation",
+          "token_count": 2,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0022",
+          "section_path": "5 Evaluation > 5.1 Text Language Modeling",
+          "token_count": 1740,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0023",
+          "section_path": "5 Evaluation > 5.2 Audio Tokenization",
+          "token_count": 1962,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0024",
+          "section_path": "5 Evaluation > 5.3 Ablations on generative modeling",
+          "token_count": 970,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0025",
+          "section_path": "5 Evaluation > 5.4 Audio language modeling",
+          "token_count": 2195,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0026",
+          "section_path": "5 Evaluation > 5.5 Spoken question answering",
+          "token_count": 939,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0027",
+          "section_path": "5 Evaluation > 5.6 Quality and statistics of generated dialogues",
+          "token_count": 463,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0028",
+          "section_path": "5 Evaluation > 5.7 Streaming ASR and TTS",
+          "token_count": 585,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0029",
+          "section_path": "5 Evaluation > 5.8 Compressing Moshi and Impact on Speech Quality",
+          "token_count": 3402,
+          "chunk_count": 5
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0030",
+          "section_path": "6 Safety",
+          "token_count": 122,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0031",
+          "section_path": "6 Safety > 6.1 Toxicity analysis",
+          "token_count": 340,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0032",
+          "section_path": "6 Safety > 6.2 Regurgitation analysis",
+          "token_count": 942,
+          "chunk_count": 2
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0033",
+          "section_path": "6 Safety > 6.3 System voice consistency",
+          "token_count": 474,
+          "chunk_count": 1
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0034",
+          "section_path": "6 Safety > 6.4 Identification of the content generated by Moshi: Watermarking",
+          "token_count": 2196,
+          "chunk_count": 3
+        },
+        {
+          "paper_id": "moshi",
+          "group_id": "moshi_group_0035",
+          "section_path": "7 Conclusion",
+          "token_count": 19115,
+          "chunk_count": 25
+        }
+      ],
+      "output_file": "data\\chunks\\setting_c.jsonl"
+    }
+  ]
+}
