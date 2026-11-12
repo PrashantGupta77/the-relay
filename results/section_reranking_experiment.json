@@ -1,0 +1,458 @@
+[
+  {
+    "question": "How does dynamic chunking decide when to create a boundary?",
+    "alpha": 0.05,
+    "baseline_rank": 11,
+    "reranked_target_rank": 10,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0008_0001",
+        "section": "2.2.3 Ratio Loss",
+        "combined_score": 0.9930979609489441
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0005_0000",
+        "section": "2.2 Dynamic Chunking (DC)",
+        "combined_score": 0.9055883288383484
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0001_0003",
+        "section": "1 Introduction",
+        "combined_score": 0.8353159427642822
+      },
+      {
+        "rank": 4,
+        "chunk_id": "dynamic_chunking_B_0012_0005",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.8328731656074524
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0016_0019",
+        "section": "5 Conclusion",
+        "combined_score": 0.7181484699249268
+      }
+    ]
+  },
+  {
+    "question": "How does dynamic chunking decide when to create a boundary?",
+    "alpha": 0.1,
+    "baseline_rank": 11,
+    "reranked_target_rank": 10,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0008_0001",
+        "section": "2.2.3 Ratio Loss",
+        "combined_score": 0.9861959218978882
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0005_0000",
+        "section": "2.2 Dynamic Chunking (DC)",
+        "combined_score": 0.903451144695282
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0001_0003",
+        "section": "1 Introduction",
+        "combined_score": 0.829625129699707
+      },
+      {
+        "rank": 4,
+        "chunk_id": "dynamic_chunking_B_0012_0005",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.8017122149467468
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0016_0019",
+        "section": "5 Conclusion",
+        "combined_score": 0.7223093509674072
+      }
+    ]
+  },
+  {
+    "question": "How does dynamic chunking decide when to create a boundary?",
+    "alpha": 0.2,
+    "baseline_rank": 11,
+    "reranked_target_rank": 10,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0008_0001",
+        "section": "2.2.3 Ratio Loss",
+        "combined_score": 0.9723919034004211
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0005_0000",
+        "section": "2.2 Dynamic Chunking (DC)",
+        "combined_score": 0.899176836013794
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0001_0003",
+        "section": "1 Introduction",
+        "combined_score": 0.8182436227798462
+      },
+      {
+        "rank": 4,
+        "chunk_id": "dynamic_chunking_B_0012_0005",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.7393901944160461
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0016_0019",
+        "section": "5 Conclusion",
+        "combined_score": 0.7306311726570129
+      }
+    ]
+  },
+  {
+    "question": "How does the H-Net routing module detect chunk boundaries?",
+    "alpha": 0.05,
+    "baseline_rank": 14,
+    "reranked_target_rank": 14,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0001_0002",
+        "section": "1 Introduction",
+        "combined_score": 0.9595117568969727
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0012_0005",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.9407938718795776
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0001_0003",
+        "section": "1 Introduction",
+        "combined_score": 0.7343971729278564
+      },
+      {
+        "rank": 4,
+        "chunk_id": "dynamic_chunking_B_0005_0000",
+        "section": "2.2 Dynamic Chunking (DC)",
+        "combined_score": 0.6990890502929688
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0016_0024",
+        "section": "5 Conclusion",
+        "combined_score": 0.6886076927185059
+      }
+    ]
+  },
+  {
+    "question": "How does the H-Net routing module detect chunk boundaries?",
+    "alpha": 0.1,
+    "baseline_rank": 14,
+    "reranked_target_rank": 14,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0001_0002",
+        "section": "1 Introduction",
+        "combined_score": 0.9190235137939453
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0012_0005",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.8938964009284973
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0005_0000",
+        "section": "2.2 Dynamic Chunking (DC)",
+        "combined_score": 0.7085459232330322
+      },
+      {
+        "rank": 4,
+        "chunk_id": "dynamic_chunking_B_0001_0003",
+        "section": "1 Introduction",
+        "combined_score": 0.7057570815086365
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0016_0024",
+        "section": "5 Conclusion",
+        "combined_score": 0.6641179919242859
+      }
+    ]
+  },
+  {
+    "question": "How does the H-Net routing module detect chunk boundaries?",
+    "alpha": 0.2,
+    "baseline_rank": 14,
+    "reranked_target_rank": 10,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0001_0002",
+        "section": "1 Introduction",
+        "combined_score": 0.8380470871925354
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0012_0005",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.8001015186309814
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0005_0000",
+        "section": "2.2 Dynamic Chunking (DC)",
+        "combined_score": 0.7274599075317383
+      },
+      {
+        "rank": 4,
+        "chunk_id": "dynamic_chunking_B_0001_0003",
+        "section": "1 Introduction",
+        "combined_score": 0.6484768986701965
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0004_0001",
+        "section": "2.1.1 Components of H-Net",
+        "combined_score": 0.618658185005188
+      }
+    ]
+  },
+  {
+    "question": "How are boundary probabilities calculated from adjacent encoder representations?",
+    "alpha": 0.05,
+    "baseline_rank": 1,
+    "reranked_target_rank": 1,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0006_0000",
+        "section": "2.2.1 Chunking Layer",
+        "combined_score": 0.9583191275596619
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0007_0000",
+        "section": "2.2.2 Dechunking",
+        "combined_score": 0.8056398034095764
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0016_0028",
+        "section": "5 Conclusion",
+        "combined_score": 0.619256317615509
+      },
+      {
+        "rank": 4,
+        "chunk_id": "dynamic_chunking_B_0014_0000",
+        "section": "3.3 Ablation Studies",
+        "combined_score": 0.46313178539276123
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0014_0002",
+        "section": "3.3 Ablation Studies",
+        "combined_score": 0.436464786529541
+      }
+    ]
+  },
+  {
+    "question": "How are boundary probabilities calculated from adjacent encoder representations?",
+    "alpha": 0.1,
+    "baseline_rank": 1,
+    "reranked_target_rank": 1,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0006_0000",
+        "section": "2.2.1 Chunking Layer",
+        "combined_score": 0.916638195514679
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0007_0000",
+        "section": "2.2.2 Dechunking",
+        "combined_score": 0.7708155512809753
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0016_0028",
+        "section": "5 Conclusion",
+        "combined_score": 0.5889026522636414
+      },
+      {
+        "rank": 4,
+        "chunk_id": "dynamic_chunking_B_0014_0000",
+        "section": "3.3 Ablation Studies",
+        "combined_score": 0.44629284739494324
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0014_0002",
+        "section": "3.3 Ablation Studies",
+        "combined_score": 0.42102938890457153
+      }
+    ]
+  },
+  {
+    "question": "How are boundary probabilities calculated from adjacent encoder representations?",
+    "alpha": 0.2,
+    "baseline_rank": 1,
+    "reranked_target_rank": 1,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0006_0000",
+        "section": "2.2.1 Chunking Layer",
+        "combined_score": 0.8332764506340027
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0007_0000",
+        "section": "2.2.2 Dechunking",
+        "combined_score": 0.7011670470237732
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0016_0028",
+        "section": "5 Conclusion",
+        "combined_score": 0.528195321559906
+      },
+      {
+        "rank": 4,
+        "chunk_id": "attention_is_all_you_need_B_0004_0000",
+        "section": "3.1 Encoder and Decoder Stacks",
+        "combined_score": 0.45915353298187256
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0014_0000",
+        "section": "3.3 Ablation Studies",
+        "combined_score": 0.412615031003952
+      }
+    ]
+  },
+  {
+    "question": "What cosine similarity threshold is used to identify a boundary?",
+    "alpha": 0.05,
+    "baseline_rank": 1,
+    "reranked_target_rank": 1,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0006_0000",
+        "section": "2.2.1 Chunking Layer",
+        "combined_score": 0.9972994327545166
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0012_0007",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.4231366515159607
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0012_0005",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.39785057306289673
+      },
+      {
+        "rank": 4,
+        "chunk_id": "dynamic_chunking_B_0016_0030",
+        "section": "5 Conclusion",
+        "combined_score": 0.36229902505874634
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0012_0006",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.21967430412769318
+      }
+    ]
+  },
+  {
+    "question": "What cosine similarity threshold is used to identify a boundary?",
+    "alpha": 0.1,
+    "baseline_rank": 1,
+    "reranked_target_rank": 1,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0006_0000",
+        "section": "2.2.1 Chunking Layer",
+        "combined_score": 0.9945988655090332
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0012_0007",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.4341815412044525
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0012_0005",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.41022631525993347
+      },
+      {
+        "rank": 4,
+        "chunk_id": "dynamic_chunking_B_0016_0030",
+        "section": "5 Conclusion",
+        "combined_score": 0.390001118183136
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0007_0000",
+        "section": "2.2.2 Dechunking",
+        "combined_score": 0.25161483883857727
+      }
+    ]
+  },
+  {
+    "question": "What cosine similarity threshold is used to identify a boundary?",
+    "alpha": 0.2,
+    "baseline_rank": 1,
+    "reranked_target_rank": 1,
+    "top_five": [
+      {
+        "rank": 1,
+        "chunk_id": "dynamic_chunking_B_0006_0000",
+        "section": "2.2.1 Chunking Layer",
+        "combined_score": 0.989197850227356
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dynamic_chunking_B_0012_0007",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.45627129077911377
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dynamic_chunking_B_0016_0030",
+        "section": "5 Conclusion",
+        "combined_score": 0.44540533423423767
+      },
+      {
+        "rank": 4,
+        "chunk_id": "dynamic_chunking_B_0012_0005",
+        "section": "3.1 Language Modeling",
+        "combined_score": 0.4349777102470398
+      },
+      {
+        "rank": 5,
+        "chunk_id": "dynamic_chunking_B_0007_0000",
+        "section": "2.2.2 Dechunking",
+        "combined_score": 0.32897600531578064
+      }
+    ]
+  }
+]

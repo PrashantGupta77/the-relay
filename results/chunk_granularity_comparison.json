@@ -1,0 +1,50 @@
+[
+  {
+    "setting": "a",
+    "question": "How does dynamic chunking decide when to create a boundary?",
+    "best_chunking_layer_rank": 16,
+    "best_chunk_id": "dynamic_chunking_A_0012_0001"
+  },
+  {
+    "setting": "a",
+    "question": "How does the H-Net routing module detect chunk boundaries?",
+    "best_chunking_layer_rank": 12,
+    "best_chunk_id": "dynamic_chunking_A_0012_0001"
+  },
+  {
+    "setting": "a",
+    "question": "How are boundary probabilities calculated from adjacent encoder representations?",
+    "best_chunking_layer_rank": 1,
+    "best_chunk_id": "dynamic_chunking_A_0016_0058"
+  },
+  {
+    "setting": "a",
+    "question": "What cosine similarity threshold is used to identify a boundary?",
+    "best_chunking_layer_rank": 1,
+    "best_chunk_id": "dynamic_chunking_A_0006_0002"
+  },
+  {
+    "setting": "b",
+    "question": "How does dynamic chunking decide when to create a boundary?",
+    "best_chunking_layer_rank": 11,
+    "best_chunk_id": "dynamic_chunking_B_0016_0019"
+  },
+  {
+    "setting": "b",
+    "question": "How does the H-Net routing module detect chunk boundaries?",
+    "best_chunking_layer_rank": 14,
+    "best_chunk_id": "dynamic_chunking_B_0005_0000"
+  },
+  {
+    "setting": "b",
+    "question": "How are boundary probabilities calculated from adjacent encoder representations?",
+    "best_chunking_layer_rank": 1,
+    "best_chunk_id": "dynamic_chunking_B_0014_0002"
+  },
+  {
+    "setting": "b",
+    "question": "What cosine similarity threshold is used to identify a boundary?",
+    "best_chunking_layer_rank": 1,
+    "best_chunk_id": "dynamic_chunking_B_0012_0006"
+  }
+]

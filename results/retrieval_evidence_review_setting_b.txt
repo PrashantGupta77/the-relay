@@ -1,0 +1,738 @@
+==========================================================================================
+QUESTION: DYN-01
+TEXT: How does dynamic chunking decide when to create a boundary?
+EXPECTED EVIDENCE: The routing module uses cosine similarity between adjacent projected encoder representations to calculate boundary probabilities.
+==========================================================================================
+
+PAPER: dynamic_chunking
+
+--------------------------------------------------------------------------------
+RANK: 1
+SCORE: 0.5838
+CHUNK: dynamic_chunking_B_0008_0001
+CITATION: Dynamic Chunking for End-to-End Hierarchical Sequence Modeling, arXiv:2507.07955v2, PDF p. 8, §2.2.3 Ratio Loss
+SECTION PATH: 2 H-Net Architecture > 2.2 Dynamic Chunking (DC) > 2.2.3 Ratio Loss
+
+FULL SOURCE TEXT:
+03 in all experiments in
+this paper as it provides a good balance between prediction accuracy and chunking efficiency; however, in other settings, it
+may be important to choose this hyperparameter more carefully.
+Notationally, we sometimes use (𝑁0, 𝑁1, . . . , 𝑁𝑠)-DC to denote the full dynamic chunking mechanism together with its
+targeted chunking ratios.
+
+--------------------------------------------------------------------------------
+RANK: 2
+SCORE: 0.5681
+CHUNK: dynamic_chunking_B_0005_0000
+CITATION: Dynamic Chunking for End-to-End Hierarchical Sequence Modeling, arXiv:2507.07955v2, PDF p. 6, §2.2 Dynamic Chunking (DC)
+SECTION PATH: 2 H-Net Architecture > 2.2 Dynamic Chunking (DC)
+
+FULL SOURCE TEXT:
+2.2
+Dynamic Chunking (DC)
+H-Net learns chunking boundaries through end-to-end training, allowing it to identify semantically meaningful units
+adaptively. Furthermore, this dynamic approach enables the model to allocate computational resources efficiently by
+compressing low-information regions while preserving high-information content at appropriate granularity.
+
+--------------------------------------------------------------------------------
+RANK: 3
+SCORE: 0.5606
+CHUNK: dynamic_chunking_B_0012_0005
+CITATION: Dynamic Chunking for End-to-End Hierarchical Sequence Modeling, arXiv:2507.07955v2, PDF pp. 14–15, §3.1 Language Modeling
+SECTION PATH: 3 Experiments > 3.1 Language Modeling
+
+FULL SOURCE TEXT:
+Transformer
+Token
+31.6
+30.7
+28.0
+28.5
+43.0
+32.3
+22.2
+SpaceByte++
+30.9
+32.1
+40.3
+30.6
+58.5
+38.5
+38.5
+H-Net (space)
+31.2
+33.2
+41.9
+31.8
+60.7
+39.8
+40.5
+H-Net (1-stage)
+Byte
+30.9
+32.7
+39.2
+31.2
+58.4
+38.6
+39.5
+H-Net (2-stage)
+31.1
+34.7
+44.1
+33.0
+61.7
+40.9
+42.8
+Robustness to Textual Perturbations.
+Table 3 evaluates model robustness on HellaSwag with various textual pertur-
+bations, following protocols from BLT (Pagnoni et al. 2024). Importantly, these are the same checkpoints trained on clean
+FineWeb-Edu data used to evaluate Table 2), without any form of special data mix or augmentations that may improve
+character-level robustness. H-Net (2-stage) demonstrates substantially improved robustness compared to all baselines,
+with performance gaps exceeding those observed in standard benchmarks.
+Visualization of Tokenized Positions.
+In Figure 4, we provide visualizations of the boundaries dynamically drawn by H-
+Net (1-stage) and H-Net (2-stage). The visualization offers several insights about how the model decides boundaries.
+• Single-stage behavior: H-Net (1-stage) predominantly places boundaries at whitespace characters, closely mirroring
+the delimiters used by SpaceByte. This indicates that H-Net learns that word boundaries represent natural semantic
+units in text. This convergence to spacelike boundaries, discovered purely through end-to-end training, conversely
+validates SpaceByte’s strong empirical performance.
+• Hierarchical chunking patterns: The first stage of H-Net (2-stage) combines spacelike boundaries with first few
+characters of each word. This strategy helps the model because once the initial positions of a word are identified, the
+remaining characters become highly predictable.
+• Content-aware chunking: One might question if H-Net’s chunking decisions follow static rules, such as drawing
+boundaries only at certain fixed bytes (e.g., whitespace). However, as shown in the figure, H-Net often merges
+multiple words and spacelike characters based on content (examples include the backbone, such as, and (ii)).
+• Perturbation behavior: Figure 16 shows the same example with textual perturbations such as removing whitespaces,
+which more prominently demonstrates that boundaries drawn by H-Net are based on content and context. In
+particular, it often still chunks in between semantic words even if the space is removed.
+14
+
+77
+69
+74
+68
+20
+6
+==========================================================================================
+QUESTION: DYN-02
+TEXT: How does the H-Net routing module detect chunk boundaries?
+EXPECTED EVIDENCE: It projects adjacent encoder outputs into query and key representations and computes a cosine-similarity-based boundary probability.
+==========================================================================================
+
+PAPER: dynamic_chunking
+
+--------------------------------------------------------------------------------
+RANK: 1
+SCORE: 0.6480
+CHUNK: dynamic_chunking_B_0001_0002
+CITATION: Dynamic Chunking for End-to-End Hierarchical Sequence Modeling, arXiv:2507.07955v2, PDF pp. 2–3, §1 Introduction
+SECTION PATH: 1 Introduction
+
+FULL SOURCE TEXT:
+ designed for operating on tokenized language—such as a
+Transformer (Vaswani et al. 2017) or state space model (SSM) (Gu and Dao 2024)—we show that the encoder and decoder
+networks are strongly improved by using SSMs, which have an inductive bias for compression (Gu 2025).
+Dynamic Chunking.
+H-Net’s core is a novel dynamic chunking (DC) mechanism which interfaces between the main
+network and the encoder/decoder networks, learning how to segment data while using standard differentiable optimization.
+DC is composed of two complementary new techniques: (i) a routing module which predicts boundaries between adjacent
+elements through a similarity score (ii) and a smoothing module which interpolates representations using the router’s
+outputs, attenuating the effect of uncertain boundaries and significantly improving learnability. By combining these with a
+new auxiliary loss function that targets desired downsampling ratios, and modern techniques for gradient-based learning
+of discrete choices (Fedus, Zoph, and Shazeer 2022; Bengio, Léonard, and Courville 2013), DC lets an H-Net learn how to
+compress data in a fully end-to-end fashion.
+Signal Propagation.
+We introduce several architectural and training techniques to improve stability and scalability
+during end-to-end optimization. These include: (i) carefully placing projections and normalization layers to balance signal
+propagation between interacting sub-networks, and (ii) adjusting optimization parameters for each layer based on its
+dimensionality and effective batch size, which changes between stages of the hierarchical structure.
+Altogether, H-Net learns segmentation strategies optimized jointly with the main backbone, dynamically compressing input
+vectors based on contextual information into meaningful chunks. H-Net represents the first truly end-to-end, tokenizer-free
+3Non-hierarchical models comprised of repeated blocks, such as the standard Transformer (Vaswani et al. 2017).
+2
+
+(c) Smoothing Module
+n
+d
+o
+f
+t
+o
+k
+e
+s
+T
+h
+e
+_
+_
+ℰ
+Chunking
+!
+h
+e
+_
+e
+n
+d
+_
+o
+f
+_
+t
+o
+k
+e
+n
+s
+!
+Dechunkinĝ
+.̅
+.
+'!
+'!"#
+'!"$
+'!"%
+1 −'!
+1 −'!"#
+1 −'!"$
+(d) Upsampler
+(b) Downsampler
+(a) Routing Module
+/0
+-
+/0"
+0"#$
+*̅
+.
++"
+Dynamic Chunking
+n
+_
+e
+ℳ
+Figure 1: (left) Architectural overview of H-Net with a two-stage hierarchical design (𝑆= 2). (right) Dynamic Chunking
+(DC). ( bottom-right ) Key components of a chunking layer: (a) a
+
+--------------------------------------------------------------------------------
+RANK: 2
+SCORE: 0.6453
+CHUNK: dynamic_chunking_B_0012_0005
+CITATION: Dynamic Chunking for End-to-End Hierarchical Sequence Modeling, arXiv:2507.07955v2, PDF pp. 14–15, §3.1 Language Modeling
+SECTION PATH: 3 Experiments > 3.1 Language Modeling
+
+FULL SOURCE TEXT:
+Transformer
+Token
+31.6
+30.7
+28.0
+28.5
+43.0
+32.3
+22.2
+SpaceByte++
+30.9
+32.1
+40.3
+30.6
+58.5
+38.5
+38.5
+H-Net (space)
+31.2
+33.2
+41.9
+31.8
+60.7
+39.8
+40.5
+H-Net (1-stage)
+Byte
+30.9
+32.7
+39.2
+31.2
+58.4
+38.6
+39.5
+H-Net (2-stage)
+31.1
+34.7
+44.1
+33.0
+61.7
+40.9
+42.8
+Robustness to Textual Perturbations.
+Table 3 evaluates model robustness on HellaSwag with various textual pertur-
+bations, following protocols from BLT (Pagnoni et al. 2024). Importantly, these are the same checkpoints trained on clean
+FineWeb-Edu data used to evaluate Table 2), without any form of special data mix or augmentations that may improve
+character-level robustness. H-Net (2-stage) demonstrates substantially improved robustness compared to all baselines,
+with performance gaps exceeding those observed in standard benchmarks.
+Visualization of Tokenized Positions.
+In Figure 4, we provide visualizations of the boundaries dynamically drawn by H-
+Net (1-stage) and H-Net (2-stage). The visualization offers several insights about how the model decides boundaries.
+• Single-stage behavior: H-Net (1-stage) predominantly places boundaries at whitespace characters, closely mirroring
+the delimiters used by SpaceByte. This indicates that H-Net learns that word boundaries represent natural semantic
+units in text. This convergence to spacelike boundaries, discovered purely through end-to-end training, conversely
+validates SpaceByte’s strong empirical performance.
+• Hierarchical chunking patterns: The first stage of H-Net (2-stage) combines spacelike boundaries with first few
+characters of each word. This strategy helps the model because once the initial positions of a word are identified, the
+remaining characters become highly predictable.
+• Content-aware chunking: One might question if H-Net’s chunking decisions follow static rules, such as drawing
+boundaries only at certain fixed bytes (e.g., whitespace). However, as shown in the figure, H-Net often merges
+multiple words and spacelike characters based on content (examples include the backbone, such as, and (ii)).
+• Perturbation behavior: Figure 16 shows the same example with textual perturbations such as removing whitespaces,
+which more prominently demonstrates that boundaries drawn by H-Net are based on content and context. In
+particular, it often still chunks in between semantic words even if the space is removed.
+14
+
+77
+69
+74
+68
+20
+6
+
+--------------------------------------------------------------------------------
+RANK: 3
+SCORE: 0.5964
+CHUNK: dynamic_chunking_B_0001_0003
+CITATION: Dynamic Chunking for End-to-End Hierarchical Sequence Modeling, arXiv:2507.07955v2, PDF pp. 3–4, §1 Introduction
+SECTION PATH: 1 Introduction
+
+FULL SOURCE TEXT:
+0
+-
+/0"
+0"#$
+*̅
+.
++"
+Dynamic Chunking
+n
+_
+e
+ℳ
+Figure 1: (left) Architectural overview of H-Net with a two-stage hierarchical design (𝑆= 2). (right) Dynamic Chunking
+(DC). ( bottom-right ) Key components of a chunking layer: (a) a routing module for dynamically drawing chunk
+boundaries, and (b) a downsampler that selectively retains vectors based on boundary indicators, reducing sequence length
+while preserving semantically significant positions. ( top-right ) Key components of a dechunking layer: (c) a smoothing
+module for converting discrete chunks into interpolated representations, and (d) an upsampler that restores compressed
+vectors to their original resolution based on boundary indicators. Linear in equation (3) and STE in equation (9) are omitted
+in the illustration for brevity.
+language model: with a single stage of dynamic chunking, a byte-level H-Net matches the perplexity and downstream
+performance of a strong BPE-tokenized Transformer at sizes exceeding 1B parameters. Empirically, the dynamic
+chunking module naturally compresses data to a similar resolution as BPE tokenizers (4.5-5 bytes/chunk) and qualitatively
+learns meaningful boundaries, all without any external supervision or heuristics.
+3
+
+Hierarchical Chunking: From Data to Abstractions
+Beyond addressing tokenization, H-Net improves general sequence modeling across a wide range of settings. Subword
+tokenization in language models is a special case of chunking—the process of building higher-level abstractions from
+low-level data—and is a central component of intelligence.4 Crucially, because H-Net is fully end-to-end, it can be iterated
+recursively: the main network can itself be an H-Net. Intuitively, more stages of chunking represent higher order
+meanings; just as characters can be combined into words, words can be combined into clauses, sentences, and beyond.
+Iterating the hierarchy should therefore lead to even more efficient use of compute and parameters, and more effective
+reasoning over compressed representations.
+Recursive H-Nets represent a new class of foundation model architectures that not only overcome tokenization, but discover
+and operate over abstractions learned from raw data, leading to higher-quality models with less pre-processing. Iterating the
+1-stage H-Net to 2 hierarchical stages further improves its capabilities and strongly outperforms all baselines, with steeper
+training curves and better scaling with data. A byte-level 2-stage H-Net overtakes the perplexity of a strong tokenized
+Transformer after just 30B training bytes, with the gap widening throughout training, and matches the downstream
+evaluations of the tokenized Transformer of twice its size.
+Finally, H-Nets realize the benefits of overcoming tokenization:
+• Robustness. Without special data
+==========================================================================================
+QUESTION: MOS-03
+TEXT: How does Moshi tokenize audio?
+EXPECTED EVIDENCE: Audio is represented using learned semantic-acoustic tokens and a residual vector quantization approach.
+==========================================================================================
+
+PAPER: moshi
+
+--------------------------------------------------------------------------------
+RANK: 1
+SCORE: 0.6693
+CHUNK: moshi_B_0015_0002
+CITATION: Moshi: a speech-text foundation model for real-time dialogue, arXiv:2410.00037v1, PDF pp. 16–17, §3.4.4 Inner Monologue
+SECTION PATH: 3 Model > 3.4 Generative audio modeling > 3.4.4 Inner Monologue
+
+FULL SOURCE TEXT:
+,1+Q+q
+= A′
+s−τ,q
+if
+s ≥τ + 1, 1 < q ≤Q
+delayed acoustic tok. of other,
+(6)
+16
+
+amounting to a total number of K = 2Q + 1 streams, with Q = 8 in the experiments. A
+summary is provided in Figure 4.
+Inference of Moshi.
+The joint sequence given by Equation 6 is the target for our model-
+ing task at train time: At any time step s, the model is input with 0, V1, . . . , Vs−1 and output
+an estimated probability distribution ˆVs(0, V1, . . . , Vs−1). At inference time, we sample from
+ˆVs,k for all the sub-sequence indexes that corresponds to outputs of Moshi: i.e., for k = 1 for
+the text tokens corresponding to Moshi’s speech, and for k ∈{2, . . . , 2+Q} for Moshi’s audio
+tokens. In an application setting, prediction for the audio coming from the user (k > 2+Q) is
+actually ignored, as the actual user audio is used instead. However, modeling the user stream
+as output allows generating simulated dialogues, which is necessary for offline evaluation as
+in Section 5.6. Interestingly, there is no explicit boundaries for the change of turns between
+the user and Moshi: Moshi can speak and listen at all time, and do both at once if needed.
+In particular, when the user speaks and Moshi stays silent, the corresponding audio tokens
+for Moshi’s stream decode into “natural silence”, a near silent waveform, instead of having
+a fixed, well defined value; At the same time, Moshi’s text stream will be filled with PAD
+tokens. As a result, the text stream can provide interesting ways of controlling Moshi, for
+instance, forcing the sampling of a EPAD token will make Moshi start talking immediately.
+
+--------------------------------------------------------------------------------
+RANK: 2
+SCORE: 0.6153
+CHUNK: moshi_B_0004_0000
+CITATION: Moshi: a speech-text foundation model for real-time dialogue, arXiv:2410.00037v1, PDF pp. 6–7, §3.1 Overview
+SECTION PATH: 3 Model > 3.1 Overview
+
+FULL SOURCE TEXT:
+3.1 Overview
+Moshi is a multi-stream speech-to-speech Transformer model, which allows for full-duplex
+spoken dialogue with a user thanks to an innovative architecture summarized in Figure 1.
+6
+
+Moshi is built on top of Helium, a text LLM which we build from scratch (Section 3.2),
+relying on high-quality text data to provide strong reasoning abilities to the model. We also
+propose Inner Monologue (Section 3.4.4), a training and inference procedure in which we
+jointly model text and audio tokens. This allows the model to fully exploit the knowledge
+imparted from the text modality, while remaining a speech-to-speech system. To enable
+real-time dialogue, we also design Moshi as a multi-stream architecture from the get-go
+(Section 3.4.3): The model is able to both speak and listen to the user at the same time,
+and does not need to explicitly model speaker turns. In addition, to capture the input user
+audio and output Moshi’s voice with high quality and in an efficient manner, we propose
+Mimi (Section 3.3), a neural audio codec combining semantic and acoustic information
+into a single tokenizer by using residual vector quantization and knowledge distillation. To
+jointly model the audio streams from Moshi and the user, as well as Moshi’s text tokens, we
+rely on a Depth Transformer compatible with streaming inference (Sections 3.4.1, 3.4.2).
+In this section, we further detail each of these components. We then describe the training
+datasets and the different training phases we used to train Moshi in Section 4. Finally, in
+Section 5, we report thorough evaluation results on Moshi’s abilities, both linguistic and
+acoustic, as well as ablation experiments on its main components, while Section 6 provides
+analyses on the safety of our system.
+
+--------------------------------------------------------------------------------
+RANK: 3
+SCORE: 0.5967
+CHUNK: moshi_B_0035_0024
+CITATION: Moshi: a speech-text foundation model for real-time dialogue, arXiv:2410.00037v1, PDF pp. 57–58, §7 Conclusion
+SECTION PATH: 7 Conclusion
+
+FULL SOURCE TEXT:
+
+PAD
+PAD
+0
+...
+0
+acoustic delay
+⎵T
+TS
+Zero
+-
+shot
+⎵synthesis
+.
+If the model predicts something else,
+forces next word into the text input.
+shot
+is
+EPAD
+PAD
+PAD
+EPAD
+PAD
+PAD
+PAD
+PAD
+Model text
+prediction
+Hello
+PAD
+EPAD
+means
+hanks
+wor
+for
+Token sampled by the model.
+Tokens forced into the model.
+⎵T
+⎵synthesis
+Tokens predicted but ignored.
+Figure 9: Representation of the joint sequence modeled by Moshi when used in
+TTS mode. Each column represent the tokens for a given step in the joint sequence (Vs,k),
+similar to the one described in Equation 6, but adapted for TTS. The audio is delayed by
+2 seconds, and we use an acoustic token delay τ = 2. Tokens are predicted from bottom to
+top in the depth Transformer. Text predictions are usually ignored, and the tokens from the
+text to generate are used instead. However, this text input lack padding token. At the end
+of each word, we allow the model to sample freely PAD and EPAD tokens. If the model tries
+to sample another token, we instead use the tokens from the next word. The semantic and
+acoustic audio tokens are sampled normally, being implicitly conditioned on the text due to
+the delay used. This method also provides a fine alignment of the words in the generated
+audio, by noting the time at which a given word is consumed by the model.
+57
+
+Appendix D. Characterizing Audio Artifacts Caused by Quantization
+First, recall that Moshi jointly outputs two streams of tokens, Wk for text, and As,k for
+audio, where 1 ≤k ≤Q corresponds to the semantic+acoustic tokens of Moshi, while
+Q + 1 ≤k ≤2Q are the tokens predicting the other speaker’s voice. We first compute
+the Shannon entropy H across windows of fixed size C at each timestep i for each of this
+stream independently. This yields H0
+i = H(W[i−C:i]) for text, and Hk
+i = H(A[i−C:i],k) for
+audio. Note that we only consider the stream of Moshi (k ≤Q). We use C = 64 in practice,
+which corresponds to roughly 4.5 seconds of audio once decoded, and ignore all the leading
+C tokens as they have a shorted context (and include the prompt used for generation).
+We observe qualitatively that the entropy spectrum is often indicative of artifacts or
+degradations of the audio samples. Formally we define three types of artifacts from the
+entropy statistics, as described below. In practice, we characterize the presence or absence
+of each artifact over non-overlapping windows of ω =
+==========================================================================================
+QUESTION: MOS-04
+TEXT: Why does Moshi use hierarchical autoregressive modeling?
+EXPECTED EVIDENCE: The hierarchical approach models multiple audio streams efficiently.
+==========================================================================================
+
+PAPER: moshi
+
+--------------------------------------------------------------------------------
+RANK: 1
+SCORE: 0.4517
+CHUNK: moshi_B_0001_0002
+CITATION: Moshi: a speech-text foundation model for real-time dialogue, arXiv:2410.00037v1, PDF p. 3, §1 Introduction
+SECTION PATH: 1 Introduction
+
+FULL SOURCE TEXT:
+ and training of Mimi while Section 5.2 details ablation studies.
+• We propose Moshi, a new architecture for audio language modeling, which combines
+Helium with a smaller Transformer (Vaswani et al., 2017) model to predict audio to-
+kens in a hierarchical and streaming fashion. We show how challenging it is for such
+unconditioned audio language models to generate intelligible speech, and we pro-
+vide solutions that outperform the intelligibility and audio quality of non-streaming
+models while generating audio in a streaming fashion. We furthermore extend this ar-
+chitecture to model several audio streams in parallel, allowing for a conceptually and
+practically simple handling of full-duplex dialogues with arbitrary dynamics. Section
+3.4 describes this architecture.
+• In Section 3.4.4, we introduce Inner Monologue, a new training and inference setup
+for audio language models that significantly improves the factuality and linguistic
+quality of generated speech by predicting time-aligned text tokens before audio to-
+kens. Moshi is a speech-to-speech model as it allows reasoning about non-linguistic
+information, both from the user audio and from Moshi’s audio. Yet, this is not in-
+compatible with Moshi producing text along its speech output. Based on the past
+observation (Borsos et al., 2022; Zhang et al., 2024b) that coarse-to-fine generation
+(from semantic to acoustic tokens) is critical to generating consistent speech, we ex-
+tend this hierarchy to using text tokens as a per-timestep prefix to the semantic token.
+Our experiments show that not only this drastically improves the length and quality
+of generated speech, but we also show how forcing a delay between text and audio
+tokens allows deriving streaming ASR and streaming TTS from a Moshi model.
+• We evaluate all components of Moshi along several axes, including text understanding,
+speech intelligibility and consistency, audio quality and spoken question answering.
+Our experiments, reported in Section 5, show that our model is state of the art among
+existing speech-text models for speech modeling and spoken question answering while
+being streaming compatible and able to model several minutes of context (5 min in
+our experiments).
+We encourage the reader to talk to Moshi using our web demo.5
+5. https://moshi.chat/
+3
+
+--------------------------------------------------------------------------------
+RANK: 2
+SCORE: 0.4220
+CHUNK: moshi_B_0029_0006
+CITATION: Moshi: a speech-text foundation model for real-time dialogue, arXiv:2410.00037v1, PDF p. 35, §5.8 Compressing Moshi and Impact on Speech Quality
+SECTION PATH: 5 Evaluation > 5.8 Compressing Moshi and Impact on Speech Quality
+
+FULL SOURCE TEXT:
+
+4.7
+5.9
+8.1
+80.7
+W3A8, block=256
+0.2
+12.2
+3.1
+21.9
+62.7
+W2A8, block=32
+12.7
+40.9
+0.5
+0.4
+45.4
+W2A8, block=256
+83.1
+11.0
+5.9
+Discussion.
+The linguistic abilities of Moshi are more sensitive to quantizing the model
+weights and activations than its output audio quality. More specifically, the audio quality
+remains close to that of the floating point baseline down to 4 bits precision, even when
+quantizing the full model, including the Depth Transformer. In contrast, the MMLU per-
+formance suffers significant drops when quantizing the model weights below 6 bits using
+post-training only quantization. Following recent quantization techniques (Tseng et al.,
+2024), we may expect improved performance at lower bitwidth by using quantized aware
+finetuning instead of PTQ. However, as Moshi’s training pipeline from Section 4 involves
+multiple stage and training datasets, this would require a more thorough investigation into
+designing quantized training phases and calibration datasets, to preserve all of Moshi’s
+abilities lost after quantization.
+
+--------------------------------------------------------------------------------
+RANK: 3
+SCORE: 0.3831
+CHUNK: moshi_B_0015_0002
+CITATION: Moshi: a speech-text foundation model for real-time dialogue, arXiv:2410.00037v1, PDF pp. 16–17, §3.4.4 Inner Monologue
+SECTION PATH: 3 Model > 3.4 Generative audio modeling > 3.4.4 Inner Monologue
+
+FULL SOURCE TEXT:
+,1+Q+q
+= A′
+s−τ,q
+if
+s ≥τ + 1, 1 < q ≤Q
+delayed acoustic tok. of other,
+(6)
+16
+
+amounting to a total number of K = 2Q + 1 streams, with Q = 8 in the experiments. A
+summary is provided in Figure 4.
+Inference of Moshi.
+The joint sequence given by Equation 6 is the target for our model-
+ing task at train time: At any time step s, the model is input with 0, V1, . . . , Vs−1 and output
+an estimated probability distribution ˆVs(0, V1, . . . , Vs−1). At inference time, we sample from
+ˆVs,k for all the sub-sequence indexes that corresponds to outputs of Moshi: i.e., for k = 1 for
+the text tokens corresponding to Moshi’s speech, and for k ∈{2, . . . , 2+Q} for Moshi’s audio
+tokens. In an application setting, prediction for the audio coming from the user (k > 2+Q) is
+actually ignored, as the actual user audio is used instead. However, modeling the user stream
+as output allows generating simulated dialogues, which is necessary for offline evaluation as
+in Section 5.6. Interestingly, there is no explicit boundaries for the change of turns between
+the user and Moshi: Moshi can speak and listen at all time, and do both at once if needed.
+In particular, when the user speaks and Moshi stays silent, the corresponding audio tokens
+for Moshi’s stream decode into “natural silence”, a near silent waveform, instead of having
+a fixed, well defined value; At the same time, Moshi’s text stream will be filled with PAD
+tokens. As a result, the text stream can provide interesting ways of controlling Moshi, for
+instance, forcing the sampling of a EPAD token will make Moshi start talking immediately.
+==========================================================================================
+QUESTION: MOS-05
+TEXT: What are the main stages of Moshi's training process?
+EXPECTED EVIDENCE: The paper describes the successive training stages and their associated data and objectives.
+==========================================================================================
+
+PAPER: moshi
+
+--------------------------------------------------------------------------------
+RANK: 1
+SCORE: 0.6157
+CHUNK: moshi_B_0029_0006
+CITATION: Moshi: a speech-text foundation model for real-time dialogue, arXiv:2410.00037v1, PDF p. 35, §5.8 Compressing Moshi and Impact on Speech Quality
+SECTION PATH: 5 Evaluation > 5.8 Compressing Moshi and Impact on Speech Quality
+
+FULL SOURCE TEXT:
+
+4.7
+5.9
+8.1
+80.7
+W3A8, block=256
+0.2
+12.2
+3.1
+21.9
+62.7
+W2A8, block=32
+12.7
+40.9
+0.5
+0.4
+45.4
+W2A8, block=256
+83.1
+11.0
+5.9
+Discussion.
+The linguistic abilities of Moshi are more sensitive to quantizing the model
+weights and activations than its output audio quality. More specifically, the audio quality
+remains close to that of the floating point baseline down to 4 bits precision, even when
+quantizing the full model, including the Depth Transformer. In contrast, the MMLU per-
+formance suffers significant drops when quantizing the model weights below 6 bits using
+post-training only quantization. Following recent quantization techniques (Tseng et al.,
+2024), we may expect improved performance at lower bitwidth by using quantized aware
+finetuning instead of PTQ. However, as Moshi’s training pipeline from Section 4 involves
+multiple stage and training datasets, this would require a more thorough investigation into
+designing quantized training phases and calibration datasets, to preserve all of Moshi’s
+abilities lost after quantization.
+
+--------------------------------------------------------------------------------
+RANK: 2
+SCORE: 0.5254
+CHUNK: moshi_B_0000_0000
+CITATION: Moshi: a speech-text foundation model for real-time dialogue, arXiv:2410.00037v1, PDF p. 1
+SECTION PATH: None
+
+FULL SOURCE TEXT:
+Moshi: a speech-text foundation model for real-time dialogue
+Moshi: a speech-text foundation model for real-time dialogue
+Alexandre D´efossez∗
+alex@kyutai.org
+Laurent Mazar´e∗
+Manu Orsini
+Am´elie Royer
+Patrick P´erez
+Herv´e J´egou
+Edouard Grave∗
+Neil Zeghidour∗
+neil@kyutai.org
+Kyutai
+∗Equal contribution
+Abstract
+We introduce Moshi, a speech-text foundation model and full-duplex spoken dialogue frame-
+work. Current systems for spoken dialogue rely on pipelines of independent components,
+namely voice activity detection, speech recognition, textual dialogue and text-to-speech.
+Such frameworks cannot emulate the experience of real conversations. First, their complex-
+ity induces a latency of several seconds between interactions. Second, text being the inter-
+mediate modality for dialogue, non-linguistic information that modifies meaning— such as
+emotion or non-speech sounds— is lost in the interaction. Finally, they rely on a segmenta-
+tion into speaker turns, which does not take into account overlapping speech, interruptions
+and interjections. Moshi solves these independent issues altogether by casting spoken dia-
+logue as speech-to-speech generation. Starting from a text language model backbone, Moshi
+generates speech as tokens from the residual quantizer of a neural audio codec, while model-
+ing separately its own speech and that of the user into parallel streams. This allows for the
+removal of explicit speaker turns, and the modeling of arbitrary conversational dynamics.
+We moreover extend the hierarchical semantic-to-acoustic token generation of previous work
+to first predict time-aligned text tokens as a prefix to audio tokens. Not only this “Inner
+Monologue” method significantly improves the linguistic quality of generated speech, but we
+also illustrate how it can provide streaming speech recognition and text-to-speech. Our re-
+sulting model is the first real-time full-duplex spoken large language model, with a theoret-
+ical latency of 160ms, 200ms in practice, and is available at github.com/kyutai-labs/moshi.
+Keywords:
+speech, text, multimodal, foundation, spoken dialogue
+1
+arXiv:2410.00037v1 [eess.AS] 17 Sep 2024
+
+--------------------------------------------------------------------------------
+RANK: 3
+SCORE: 0.5056
+CHUNK: moshi_B_0030_0000
+CITATION: Moshi: a speech-text foundation model for real-time dialogue, arXiv:2410.00037v1, PDF p. 35, §6 Safety
+SECTION PATH: 6 Safety
+
+FULL SOURCE TEXT:
+6 Safety
+In parallel with the development of Moshi, we explore different directions related to the
+safety of AI generated content. In this section, we specifically consider several questions
+regarding the content generated by Moshi, each addressed in a dedicated subsection:
+1. How does our model behave in terms of producing toxic content?
+2. How to avoid that the model regurgitates audio content from the training set?
+3. How do we ensure that the model uses the voice we intend to give to Moshi?
+4. How to identify if a given content has been generated by Moshi?
+35

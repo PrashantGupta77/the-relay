@@ -1,0 +1,20 @@
+{
+  "setting": "a",
+  "source_chunk_file": "data\\chunks\\setting_a.jsonl",
+  "index_file": "data\\indexes\\setting_a.faiss",
+  "metadata_file": "data\\indexes\\setting_a_windows.jsonl",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dimension": 384,
+  "model_max_sequence_length": 256,
+  "embedding_content_token_limit": 254,
+  "embedding_window_overlap_tokens": 32,
+  "similarity_metric": "inner_product_on_normalized_vectors",
+  "faiss_index_type": "IndexFlatIP",
+  "original_chunk_count": 430,
+  "embedding_window_count": 734,
+  "vector_count": 734,
+  "metadata_record_count": 734,
+  "embedding_dtype": "float32",
+  "normalized_embeddings": true,
+  "created_at_utc": "2026-11-11T16:00:23.689255+00:00"
+}
