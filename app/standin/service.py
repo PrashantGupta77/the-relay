@@ -259,7 +259,7 @@ async def chat_completions(
 
     async def stream_events():
         try:
-            effective_ttft_ms = config.ttft_ms + slowdown
+            effective_ttft_ms = (config.base_latency_ms + config.ttft_ms + slowdown)
             await asyncio.sleep(effective_ttft_ms / 1000)
 
             pieces = [

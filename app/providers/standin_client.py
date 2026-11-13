@@ -3,7 +3,7 @@ import asyncio
 import json
 import time
 
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 import httpx
@@ -30,10 +30,17 @@ class StandInClient:
         *,
         scenario: str,
         messages: list[dict[str, Any]],
+        queue_wait_ms: float = 0.0,
     ) -> dict[str, Any]:
 
-        start_time = datetime.now(timezone.utc)
-        start_clock = time.perf_counter()
+        start_time = (
+            datetime.now(timezone.utc)
+            - timedelta(milliseconds=queue_wait_ms)
+        )
+        start_clock = (
+            time.perf_counter()
+            - (queue_wait_ms / 1000)
+        )
 
         attempts: list[dict[str, Any]] = []
         first_token_ms = None
@@ -266,6 +273,7 @@ class StandInClient:
             attempts=attempts,
             tokens_in=tokens_in,
             tokens_out=tokens_out,
+            queue_wait_ms=queue_wait_ms,
         )
 
         return {

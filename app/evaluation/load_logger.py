@@ -1,4 +1,4 @@
-
+import os
 import csv
 import json
 import uuid
@@ -11,8 +11,19 @@ from typing import Any
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 RESULTS_DIR = PROJECT_ROOT / "results"
 
-CSV_FILE = RESULTS_DIR / "results.csv"
-TRACE_FILE = RESULTS_DIR / "traces.jsonl"
+CSV_FILE = Path(
+    os.environ.get(
+        "RELAY_RESULTS_CSV",
+        str(RESULTS_DIR / "results.csv"),
+    )
+)
+
+TRACE_FILE = Path(
+    os.environ.get(
+        "RELAY_TRACE_FILE",
+        str(RESULTS_DIR / "traces.jsonl"),
+    )
+)
 
 CSV_FIELDS = [
     "request_id",
@@ -40,6 +51,7 @@ def log_load_request(
     attempts: list[dict[str, Any]],
     tokens_in: int | None = None,
     tokens_out: int | None = None,
+    queue_wait_ms: float = 0.0
 ) -> str:
     """Log one logical stand-in request and all its attempts."""
 
@@ -121,6 +133,7 @@ def log_load_request(
         "completed_at": datetime.now(timezone.utc).isoformat(),
         "status": status,
         "total_ms": round(total_ms, 2),
+        "queue_wait_ms": round(queue_wait_ms, 2),
         "first_token_ms": (
             round(first_token_ms, 2)
             if first_token_ms is not None

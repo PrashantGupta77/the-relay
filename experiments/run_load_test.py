@@ -214,6 +214,7 @@ async def run_scenario(name: str) -> None:
                                 ),
                             }
                         ],
+                        queue_wait_ms=queue_wait_ms,
                     )
 
                     result["queue_wait_ms"] = round(

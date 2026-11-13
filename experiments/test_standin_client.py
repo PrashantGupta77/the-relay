@@ -15,13 +15,14 @@ async def main():
     async with httpx.AsyncClient() as http_client:
         result = await client.generate(
             http_client,
-            scenario="standin_client_smoke",
+            scenario="queue_wait_logging_smoke",
             messages=[
                 {
                     "role": "user",
                     "content": "Explain the purpose of a RAG system.",
                 }
             ],
+            queue_wait_ms=125.0,
         )
 
     print("\n========== CLIENT RESULT ==========")
